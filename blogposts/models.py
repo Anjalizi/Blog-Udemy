@@ -7,3 +7,10 @@ class Post(models.Model):
 	image = models.ImageField(upload_to = 'media/')
 	body = models.TextField()
 
+	def __str__(self):
+		return self.title
+
+    #I like the way pub_date looks, I am not using this
+	def pub_date_pretty(self):
+		return self.pub_date.strftime('%b %d %Y')
+

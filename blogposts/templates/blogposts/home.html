@@ -1,1 +1,11 @@
 <h1>Simply Mathological</h1>
+
+<h2>Latest Posts</h2>
+
+{% for post in posts.all %}
+
+{{ post.title }}<br>
+{{ post.pub_date }}<br>
+{{ post.body }}<br><br>
+
+{% endfor %}
