@@ -14,3 +14,7 @@ class Post(models.Model):
 	def pub_date_pretty(self):
 		return self.pub_date.strftime('%b %d %Y')
 
+	def summary(self):
+		if(len(self.body)>100):
+			self.body = self.body[:100]+" ..."
+		return self.body
