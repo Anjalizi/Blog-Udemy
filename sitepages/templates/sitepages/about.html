@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     
-    <title>{{ posts.title }}</title>
+    <title>Simply Mathological</title>
   </head>
   <body>
   	<nav class="navbar navbar-expand-lg navbar-light bg-warning">
@@ -33,30 +33,13 @@
 </nav>
 
   	<br>
-  	<div class="container rounded">
-  		<h3 style="font-family: 'Gaegu', cursive;" class="text-center">Thanks for taking out time to read this blog!</h3>
-  		<h1 class="text-center">{{ posts.title }}</h1>
-		<h5 class="text-center"><i class="far fa-clock"></i> {{ posts.pub_date }}</h5><br>
-		<img src="{{ posts.image.url }}" class="img-responsive center-block" style='max-height: 250px; margin: 0 auto; display: table;'><br>
-		<span class="border border-danger rounded container" style="display: inline-block;"><br><div class="container"><h6>{{ posts.body }}</h6>
-		</div><br></span><br><br>
+  	<div class="container">
+      <h1 class="text-center" style="font-family: 'Gaegu', cursive;">About Simply Mathological</h1>
+      <h4>Hi! My name is Anjali and I am a third year undergraduate at NSIT. This name is inspired by one of my favourite YouTubers <b>Simply Nailogical</b>. Go check her out <i>and ofcourse me</i>!</h4><br>
 
-		<div id="disqus_thread"></div>
-		<script>
-
-		var disqus_config = function () {
-    //to segregate content post wise
-		this.page.identifier = 'post-{{ posts.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-		};
-		(function() { // DON'T EDIT BELOW THIS LINE
-		var d = document, s = d.createElement('script');
-		s.src = 'https://simplymathological.disqus.com/embed.js';
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-		})();
-		</script>
-		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  	</div><br><br>
+      {% load static %}
+    <img src="{% static 'blogposts/mypic.jpeg' %}" class="img-responsive center-block" style='max-height: 300px; margin: 0 auto; display: table;'>
+    </div>
                             
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
